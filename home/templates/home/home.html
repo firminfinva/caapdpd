@@ -1,0 +1,37 @@
+<!doctype html>
+
+{% extends 'home/navbar.html' %}
+{% load static %}
+{% block content %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
+</head>
+<body>
+    <dvi class="homapage">
+        <div class="homeContent">
+            <div class="hc_left">
+                <div class="under_hc_left">
+                    <h1> CAADPD</h1>
+                    <h6>Club des amis pour l'assistance et le développement des personnes défavorisées</h6>
+
+                    <p class="home_experience"> <strong>Avec 15 ans d'experience</strong> , CAADPD est une association à but non lucratif qui aide les femmes enceintes de la région du Nord Kivu à
+                        accéder à des soins de santé de qualité. Notre objectif est de réduire
+                        la mortalité maternelle et infantile en offrant des services de santé adaptés aux besoins des femmes enceintes.</p>
+                </div>
+                <div class="home_button">
+                    <a href="#" class="button1">Rejoignez-nous</a>
+                    <a href="#" class="button2">Faire un don</a>
+                </div>
+
+            </div>
+        </div>
+    </dvi>
+</body>
+</html>
+{% endblock content %}

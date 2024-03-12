@@ -1,0 +1,70 @@
+<!doctype html>
+{% load static %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'css/global.css' %}"
+/>
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="{% static 'css/navbar.css' %}"
+    />
+</head>
+<body>
+    <div class="nav-container">
+        <a href="{% url 'home' %}" class="logo">
+            <img src="{% static 'images/logo.jpg' %}" alt="CAADPD" /> CAADPD
+        </a>
+        <div class="nav-btn">
+            <div class="nav-links">
+                <ul class="nav-ul">
+                    <li class="nav-link">
+                        <a href="{% url 'home' %}" class="nav-item nav-link active"
+                        >Accueil</a
+                        >
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" class="nav-item nav-link active"
+                        >Services</a
+                        >
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" class="nav-item nav-link active"
+                        >A propos</a
+                        >
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#" class="nav-item nav-link active"
+                        >Contact</a
+                        >
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-don">
+                <button>Faire un don</button>
+            </div>
+        </div>
+       
+        <div class="hamburger-menu-container">
+            <div class="hamburger-menu">
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div class="coantents">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+</body>
+</html>
