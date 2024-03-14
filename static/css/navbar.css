@@ -4,9 +4,7 @@
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
 }
-:root{
-    --nav-height: 80px;
-}
+
 
 .nav-container{
     display: flex;
@@ -55,7 +53,7 @@
 }
 
 ul li, li>a {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 600;
     list-style: none;
     color: var(--accent-color);
@@ -65,4 +63,29 @@ li>a:hover {
 }
 .hamburger-menu-container{
     display: none;
+}
+
+@media (max-width: 920px) { 
+    .nav-container{
+        flex-direction: column;
+        height: auto;
+    }
+    .nav-btn{
+        width:99%;   
+    }
+    .nav-ul{
+        gap: 5px;
+    }
+    ul li, li>a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        font-weight: 600;
+        width: 95%;
+        height: 35px;
+        background-color: var(--accent-color);
+        color: white;
+    }
+  
 }

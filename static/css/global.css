@@ -3,22 +3,24 @@
 }
 /* --primary-color: #4285F4;
 --secondary-color: #EBF5FF;
---accent-color: #9CCC65; */
+--accent-color: #9CCC65; 
+   --accent-color: #b1d38b;*/
 
 
 :root{
     --primary-color: #4285F4;
     --secondary-color: #EBF5FF;
-    --accent-color: #b1d38b;
+    --accent-color: #498900;
+     --nav-height: 80px;
 }
 button{
     border: none;
     width: 6rem;
     height: 2.5rem;
-    background-color: var(--primary-color);
-    border: 2px solid var(--accent-color);
+    border: 2px solid var(--primary-color);
     border-radius: 5px;
 }
 button:hover{
-    background-color: white;
+    color: white;
+    background-color: var(--accent-color)
 }

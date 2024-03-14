@@ -10,10 +10,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="{% static 'css/global.css' %}"
+    />
     <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
 </head>
 <body>
-    <dvi class="homapage">
+    <div class="homapage">
         <div class="homeContent">
             <div class="hc_left">
                 <div class="under_hc_left">
@@ -31,7 +36,115 @@
 
             </div>
         </div>
-    </dvi>
+    </div>
+    <div class="services">
+        <h1>Nos services</h1>
+        <div class="service-content">
+            <div>
+                <div class="left-service">
+                    <div class="service-img">
+                        <img src="{% static 'images/service1.jpg' %}" />
+                    </div>
+                </div>
+                <div class="right-service">
+                    <h2>Services 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <p>
+                </div>
+            </div>
+            <div class="second-service">
+                <div class="left-service">
+                    <div class="service-img">
+                        <img src="{% static 'images/service2.jpg' %}" />
+                    </div>
+                </div>
+                <div class="right-service">
+                    <h2>Services 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <p>
+                </div>
+            </div>
+            <div>
+                <div class="left-service">
+                    <div class="service-img">
+                        <img src="{% static 'images/service3.jpg' %}" />
+                    </div>
+                </div>
+                <div class="right-service">
+                    <h2>Services 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                       
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accomplissement">
+        <h1>Nos accomplissement</h1>
+        <div class="accomplissement-content">
+            <div>
+                <h4 class="title">First accomplissement</h4>
+                <p>20000</p>
+            </div>
+            <div>
+                <h4 class="title">First accomplissement</h4>
+                <p>20000</p>
+            </div>
+            <div>
+                <h4 class="title">First accomplissement</h4>
+                <p>20000</p>
+            </div>
+            <div>
+                <h4 class="title">First accomplissement</h4>
+                <p>20000</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 {% endblock content %}
