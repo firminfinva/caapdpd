@@ -277,5 +277,14 @@
   .accomplissement-content{
     flex-direction: column;
   }
+  .contact-content{
+    flex-direction: column;
+    padding: 0 5px;
+    margin-top: 20px;
+  }
+ 
+  .contact-content>div{
+    width: 100%;
+  }
 
 }
