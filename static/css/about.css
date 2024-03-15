@@ -1,0 +1,39 @@
+.apropos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px clamp(0.625rem, -7.857rem + 22.619vw, 12.5rem);
+
+}
+.apropos-h1{
+    background-color: var(--primary-color);
+    padding: 2px 5px;
+}
+.apropos-h2{
+    width: 100%;
+    background-color: var(--primary-color);
+    text-align: center;
+ }
+ h4{
+    font-size: 14px;
+    width: calc(100% - 30px);
+    background-color: var(--primary-color);
+    padding: 2px 15px;
+ }
+ .ul{
+
+    margin-left: 2vw;
+ }
+.ul .li{
+    content: ".";
+    color: black;
+    justify-content: start;
+    background-color: white;
+    font-size: 15px;
+    font-weight: 200;
+
+ }
+ .li::marker{
+    content: "*";
+
+ }

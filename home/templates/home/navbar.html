@@ -17,6 +17,47 @@
             type="text/css"
             href="{% static 'css/navbar.css' %}"
     />
+    <script type="text/javascript">
+        var user = '{{request.user}}'
+
+        function getToken(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        var csrftoken = getToken('csrftoken')
+
+        function getCookie(name) {
+            // Split cookie string and get all individual name=value pairs in an array
+            var cookieArr = document.cookie.split(";");
+
+            // Loop through the array elements
+            for(var i = 0; i < cookieArr.length; i++) {
+                var cookiePair = cookieArr[i].split("=");
+
+                /* Removing whitespace at the beginning of the cookie name
+                and compare it with the given string */
+                if(name == cookiePair[0].trim()) {
+                    // Decode the cookie value and return
+                    return decodeURIComponent(cookiePair[1]);
+                }
+            }
+
+            // Return null if not found
+            return null;
+        }
+
+</script>
 </head>
 <body>
     <div class="nav-container">
@@ -32,18 +73,18 @@
                         >
                     </li>
                     <li class="nav-link">
-                        <a href="#" class="nav-item nav-link active"
+                        <a href="#services" class="nav-item nav-link active"
                         >Services</a
                         >
                     </li>
                     <li class="nav-link">
-                        <a href="#" class="nav-item nav-link active"
+                        <a href="{% url 'apropos' %}" class="nav-item nav-link active"
                         >A propos</a
                         >
                     </li>
 
                     <li class="nav-link">
-                        <a href="#" class="nav-item nav-link active"
+                        <a href="#contact" class="nav-item nav-link active"
                         >Contact</a
                         >
                     </li>
@@ -54,17 +95,26 @@
             </div>
         </div>
        
-        <div class="hamburger-menu-container">
-            <div class="hamburger-menu">
-                <div></div>
-            </div>
-        </div>
     </div>
     <div class="contents">
         {% block content %}
 
         {% endblock %}
     </div>
-
+    <script>
+        const autoHeightDiv = document.querySelector(".nav-container"); // Replace with actual ID
+        const targetDiv = document.querySelector(".contents"); // Replace with actual ID
+        
+        function setMarginTop() {
+            const actualHeight = autoHeightDiv.offsetHeight; // Get actual height after content load
+            console.log(actualHeight)
+            if (actualHeight) { // Check if height is retrieved successfully
+                targetDiv.style.marginTop = `${actualHeight}px`; // Set margin-top with retrieved height
+            } else {
+                console.error("Failed to retrieve actual height. Consider alternative approach.");
+            }
+        }
+        setMarginTop();
+    </script> 
 </body>
 </html>

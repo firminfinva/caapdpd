@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-    <div class="services">
+    <div class="services" id="services">
         <h1>Nos services</h1>
         <div class="service-content">
             <div>
@@ -131,23 +131,23 @@
         <div class="accomplissement-content">
             <div>
                 <h4 class="title">First accomplissement</h4>
-                <p>20000</p>
+                <p id="theNumber1">20000</p>
             </div>
             <div>
                 <h4 class="title">First accomplissement</h4>
-                <p>20000</p>
+                <p id="theNumber2">22000</p>
             </div>
             <div>
                 <h4 class="title">First accomplissement</h4>
-                <p>20000</p>
+                <p id="theNumber3">20000</p>
             </div>
             <div>
                 <h4 class="title">First accomplissement</h4>
-                <p>20000</p>
+                <p id="theNumber4">20000</p>
             </div>
         </div>
     </div>
-    <div class="contact">
+    <div class="contact" id="contact">
         <h1>Contactez-nous</h1>
         <div class="contact-content">
             <div class="left-side-contact">
@@ -216,6 +216,43 @@
        </div>
        <p>© 2024 CAADPD | All right reserved</P>
     </footer>
+    <script>
+        const paragraphs = document.querySelectorAll("p[id^='theNumber']"); 
+
+        function animateNumber(paragraphElement) {
+        const targetNumber = parseInt(paragraphElement.textContent, 10); 
+
+        let currentNumber = 0;
+        const animationDuration = 100;
+
+        const interval = setInterval(() => {
+            currentNumber += Math.ceil((targetNumber - currentNumber) / (animationDuration / 10));
+            paragraphElement.textContent = currentNumber;
+
+            if (currentNumber >= targetNumber) {
+            clearInterval(interval);
+            }
+        }, 10);
+        }
+
+        const options = {
+        root: null,
+        threshold: 0.5,
+        };
+
+        const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            animateNumber(entry.target); 
+            observer.unobserve(entry.target);
+            }
+        });
+        });
+
+        paragraphs.forEach(paragraph => observer.observe(paragraph)); 
+
+    </script>     
+    
 </body>
 </html>
 {% endblock content %}
