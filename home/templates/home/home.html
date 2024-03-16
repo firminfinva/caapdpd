@@ -251,6 +251,17 @@
 
         paragraphs.forEach(paragraph => observer.observe(paragraph)); 
 
+
+        const servicesLink = document.querySelector('.nav-item.nav-link.active');
+
+        servicesLink.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default browser behavior (full page reload)
+        const servicesSection = document.getElementById('services');
+        if (servicesSection) {
+            servicesSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scrolling
+        }
+        });
+
     </script>     
     
 </body>
